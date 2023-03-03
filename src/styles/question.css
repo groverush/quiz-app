@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Karla:wght@400;500;600;700&display=swap');
+.question-page{
+    height: 100vh;
+    width: 100%;
+    background-image: url("../assets/blob2.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 1.5em;
+    gap: 3em;
+    color: #293264;
+    
+}
+.question-form{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.question-field{
+    border:none;
+    border-bottom: 1px solid #DBDEF0;
+    padding: 1.2em 0;
+    margin-bottom: 0.72em;
+}
+
+.question-legend{
+    font-weight: 700;
+    font-size: 1.12rem;
+    font-family: 'Karla', sans-serif;
+}
+.answers{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.52em;
+}
+.answer-label {
+    padding: 0.72em 1.3em;
+    border: 1px solid #4D5B9E;
+    font-size: 0.70rem;
+    cursor: pointer;
+    margin-right: 0.4em;
+    border-radius: 2em;
+    position: relative;
+    z-index: 2;
+
+}
+input[type=radio]{
+    -webkit-appearance: none;
+    appearance: none;
+}
+input[type=radio]:checked{
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color: #D6DBF5;
+    position: absolute;
+    z-index: -1;
+    border-radius: 2em;
+    font-weight: 600;
+    border: none;
+}
+
+/* input[type=radio].disabled {
+    background: black;
+} */
+input[type=radio].correct{
+    background-color: #94D7A2;
+}
+
+input[type=radio].wrong:checked {
+    background-color: #F8BCBC;
+}
+
+.check-answers-btn,
+.play-again-btn{
+    align-self: center;
+    margin-top: 0.42em;
+    padding: 0.92em 1.7em;
+    cursor: pointer;
+    color: #F5F7FB;
+    background-color: #4D5B9E;
+    border: none;
+    font-weight: 600;
+    border-radius: 0.72em;
+}
+.check-answers-btn:hover,
+.play-again-btn:hover,
+.check-answers-btn:focus,
+.play-again-btn:focus{
+    background-color: #293264;
+    
+}
+.quiz-score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.quiz-score p {
+    font-weight: 600;
+    margin-right: 0.52em;
+}
