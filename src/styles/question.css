@@ -47,6 +47,7 @@
     z-index: 2;
 
 }
+
 input[type=radio]{
     -webkit-appearance: none;
     appearance: none;
@@ -64,16 +65,7 @@ input[type=radio]:checked{
     border: none;
 }
 
-/* input[type=radio].disabled {
-    background: black;
-} */
-input[type=radio].correct{
-    background-color: #94D7A2;
-}
 
-input[type=radio].wrong:checked {
-    background-color: #F8BCBC;
-}
 
 .check-answers-btn,
 .play-again-btn{
@@ -103,4 +95,16 @@ input[type=radio].wrong:checked {
 .quiz-score p {
     font-weight: 600;
     margin-right: 0.52em;
+}
+
+
+input[type=radio].correct {
+    background-color: #94D7A2;
+}
+
+input[type=radio].wrong:checked {
+    background-color: #F8BCBC;
+}
+input[type=radio].disabled:not(:checked) {
+    background-color: black;
 }

@@ -47,7 +47,6 @@ const Question = () => {
     const correctAnswers = array.filter((correct) => correct)
     setScore(correctAnswers.length)
     setShowAnswers(true)
-    const answers = document.querySelectorAll("input[type='radio']")
   }
 
   function playAgain() {
