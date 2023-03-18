@@ -37,15 +37,27 @@
     row-gap: 0.52em;
 }
 .answer-label {
-    padding: 0.72em 1.3em;
+    padding: 0.52em 1.3em;
     border: 1px solid #4D5B9E;
-    font-size: 0.70rem;
+    font-size: 0.80rem;
     cursor: pointer;
     margin-right: 0.4em;
-    border-radius: 2em;
+    border-radius: 1em;
     position: relative;
     z-index: 2;
+    font-weight: 500;
 
+}
+
+
+label.disabled {
+    opacity: 0.6;
+    border: 1px solid #4D5B9E;
+}
+label.correct{
+    background-color: #94D7A2;
+    opacity: 1;
+    border: none;
 }
 
 input[type=radio]{
@@ -60,9 +72,8 @@ input[type=radio]:checked{
     background-color: #D6DBF5;
     position: absolute;
     z-index: -1;
-    border-radius: 2em;
-    font-weight: 600;
-    border: none;
+    border-radius: 0.9em;
+    
 }
 
 
@@ -105,6 +116,6 @@ input[type=radio].correct {
 input[type=radio].wrong:checked {
     background-color: #F8BCBC;
 }
-input[type=radio].disabled:not(:checked) {
-    background-color: black;
+input[type=radio].wrong:checked:has(>label.answer-label){
+    border:none;
 }

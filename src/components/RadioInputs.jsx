@@ -5,7 +5,12 @@ const RadioInputs = ({ question, showAnswers, checkAnswers }) => {
   return (
     <>
       {question.options.map((answer, index) => (
-        <label className={`answer-label`} key={index}>
+        <label
+          className={`answer-label ${showAnswers && "disabled"} ${
+            showAnswers && answer === question.correct_answer && "correct"
+          } ${showAnswers && answer !== question.correct_answer && "wrong"}`}
+          key={index}
+        >
           <input
             className={`${
               showAnswers && answer === question.correct_answer
